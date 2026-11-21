@@ -1024,7 +1024,7 @@ const WEDDING = {
   bride: {
     name:      { en: "Pragati Sishodiya", hi: "प्रगति सिसोदिया" },
     firstName: { en: "Pragati", hi: "प्रगति" },
-    // shown in three rows: "Daughter of", mother, then "& father"
+    // shown in three rows: "Daughter of", father, then "& mother"
     parents: { of: { en: "Daughter of", hi: "सुपुत्री" }, mother: { en: "Suman Sishodiya", hi: "श्रीमती सुमन सिसोदिया" }, father: { en: "Vimal Sishodiya", hi: "श्री विमल सिसोदिया" } },
     photo: "",                       // leave empty to use the built-in photo, or give a path like "photos/bride.jpg"
     photoKey: "bride", photoPos: "50% 30%"
@@ -2048,7 +2048,7 @@ function premTemple() {
           <span class="person-role">${esc(T(p === W.bride ? "bride" : "groom"))}</span>
           <span class="person-name">${esc(L(p.name))}</span>
           <span class="person-parents">${p.parents && p.parents.of
-            ? `<span class="pp-of">${esc(L(p.parents.of))}</span><span>${esc(L(p.parents.mother))}</span><span>${lang === "hi" ? "एवं" : "&amp;"} ${esc(L(p.parents.father))}</span>`
+            ? `<span class="pp-of">${esc(L(p.parents.of))}</span><span>${esc(L(p.parents.father))}</span><span>${lang === "hi" ? "एवं" : "&amp;"} ${esc(L(p.parents.mother))}</span>`
             : esc(keep(L(p.parents)))}</span>
           ${p.sibling ? `<span class="person-sibling">${esc(keep(L(p.sibling)))}</span>` : ""}
         </figcaption>
